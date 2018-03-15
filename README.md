@@ -10,7 +10,7 @@ The scripts are written in python3 and need to be executed sequentially in the o
 
 The `settings.ini` files are used to configure the scripts for which project the script will be executed. These are the scripts:
 
-- 1. Reviews' Details Crawler:
+1. Reviews' Details Crawler:
 
 > This script downloads the JSON files containing the details of every review in a certain community (Eclipse or Couchbase). The reviews JSON files are saved in the `reviews_details` dir.
 
