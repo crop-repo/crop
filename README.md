@@ -35,22 +35,13 @@ The `settings.ini` files are used to configure the scripts for which project the
 > This script creates a git repository for the project specified in the settings. It automatically extracts and commit each snapshot in sequential order to the new git repository. The new git repository is located in the `git_repos` dir.<br><br>
 In addition, the script creates a CSV file to store important data about each revision in a easily accessible way. In the CSV, each line represents a single revision, and the following information is saved in each column:<br><br>
 **id**: an unique id to identify the revision within an specific community<br>
-**review_number**: the unique review number in which the revision is part of
-
-> **revision_number**: the number of the revision in the specific review
-
-> **author**: the author of the revision
-
-> **status**: the status of the revision
-
-> **change_id**: the change id of this revision
-
-> **url**: the URL in which one can access the web view of the revision
-
-> **original\_before\_commit_id**: the commit id listed by gerrit as the version of the system before the revision took place
-
-> **original\_after\_commit_id**: the commit id listed by gerrit as the version of the system after the revision took place
-
-> **before\_commit\_id**: the commit id that represents the version of the system before the revision took place in the new git repository that was created by this script
-
-> **after\_commit\_id**: the commit id that represents the version of the system after the revision took place in the new git repository that was created by this script
+**review_number**: the unique review number in which the revision is part of<br>
+**revision_number**: the number of the revision in the specific review<br>
+**author**: the author of the revision<br>
+**status**: the status of the revision<br>
+**change_id**: the change id of this revision<br>
+**url**: the URL in which one can access the web view of the revision<br>
+**original\_before\_commit_id**: the commit id listed by gerrit as the version of the system before the revision took place<br>
+**original\_after\_commit_id**: the commit id listed by gerrit as the version of the system after the revision took place<br>
+**before\_commit\_id**: the commit id that represents the version of the system before the revision took place in the new git repository that was created by this script<br>
+**after\_commit\_id**: the commit id that represents the version of the system after the revision took place in the new git repository that was created by this script
