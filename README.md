@@ -32,8 +32,7 @@ The `settings.ini` files are used to configure the scripts for which project the
 
 6. Git Repo Populator:
 
-> This script creates a git repository for the project specified in the settings. It automatically extracts and commit each snapshot in sequential order to the new git repository. The new git repository is located in the `git_repos` dir.
-
+> This script creates a git repository for the project specified in the settings. It automatically extracts and commit each snapshot in sequential order to the new git repository. The new git repository is located in the `git_repos` dir.<br>
 In addition, the script creates a CSV file to store important data about each revision in a easily accessible way. In the CSV, each line represents a single revision, and the following information is saved in each column:
 
 > **id**: an unique id to identify the revision within an specific community
