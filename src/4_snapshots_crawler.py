@@ -26,7 +26,7 @@ def are_before_and_after_snapshots_downloaded(review_id, revision_number):
 # function to download a certain snapshot of a certain revision
 # the 'when' parameter denotes whether the snapshot is before or after the revision
 def download_snapshot(review_id, revision_number, commit_id, when):
-    print("Downloading " + when + "_" + review_id + "_" + "rev" + revision_number + ".tar.gz")
+    print("Downloading " + when + "_" + review_id + "_" + "rev" + revision_number + ".tar.gz of " + PROJECT)
 
     # depending on the community, the snapshot_url is different
     # see the settings file for more details
@@ -74,8 +74,8 @@ def is_snapshot_empty(new_snapshot_file_name):
 rg_id = re.compile("/(\d+)\.json")
 
 config = configparser.ConfigParser()
-# config.read("Couchbase_settings.ini")
-config.read("Eclipse_settings.ini")
+config.read("Couchbase_settings.ini")
+# config.read("Eclipse_settings.ini")
 
 COMMUNITY = config['DETAILS']['community']
 PROJECT = config['DETAILS']['project']
@@ -98,13 +98,11 @@ review_jsons = sorted(glob.glob("reviews_details/"+ COMMUNITY + "/*.json"), key=
 for review_json in review_jsons:
     review_number = rg_id.findall(review_json)[0]
 
-    # if int(review_number) < 40000:
     review_json = json.load(open(review_json))
 
     # check whether the review JSON is regarding the project
     # if yes, download the snapshots for before and after each revision
     if PROJECT_REVIEW_JSON == review_json["project"]:
-
         # iterate over all revisions, sorted by the revision number
         for key, value in sorted(review_json["revisions"].items(), key = lambda revision_item : int(revision_item[1]["_number"])):
             revision_number = str(value["_number"])

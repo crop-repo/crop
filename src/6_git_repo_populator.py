@@ -363,8 +363,8 @@ def reset_repo():
 rg_id = re.compile("/(\d+)\.json")
 
 config = configparser.ConfigParser()
-# config.read("Couchbase_settings.ini")
-config.read("Eclipse_settings.ini")
+config.read("Couchbase_settings.ini")
+# config.read("Eclipse_settings.ini")
 
 COMMUNITY = config['DETAILS']['community']
 PROJECT = config['DETAILS']['project']
